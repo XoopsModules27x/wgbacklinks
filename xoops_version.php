@@ -93,16 +93,16 @@ $modversion['tables'][3] = 'wgbacklinks_clients';
 $c = 1;
 // Keywords
 $modversion['config'][$c]['name']        = 'keywords';
-$modversion['config'][$c]['title']       = '\_MI_WGBACKLINKS_KEYWORDS';
-$modversion['config'][$c]['description'] = '\_MI_WGBACKLINKS_KEYWORDS_DESC';
+$modversion['config'][$c]['title']       = '_MI_WGBACKLINKS_KEYWORDS';
+$modversion['config'][$c]['description'] = '_MI_WGBACKLINKS_KEYWORDS_DESC';
 $modversion['config'][$c]['formtype']    = 'textbox';
 $modversion['config'][$c]['valuetype']   = 'text';
 $modversion['config'][$c]['default']     = 'wgbacklinks, wedega, webdesign gabor';
 ++$c;
 // Admin pager
 $modversion['config'][$c]['name']        = 'adminpager';
-$modversion['config'][$c]['title']       = '\_MI_WGBACKLINKS_ADMIN_PAGER';
-$modversion['config'][$c]['description'] = '\_MI_WGBACKLINKS_ADMIN_PAGER_DESC';
+$modversion['config'][$c]['title']       = '_MI_WGBACKLINKS_ADMIN_PAGER';
+$modversion['config'][$c]['description'] = '_MI_WGBACKLINKS_ADMIN_PAGER_DESC';
 $modversion['config'][$c]['formtype']    = 'textbox';
 $modversion['config'][$c]['valuetype']   = 'int';
 $modversion['config'][$c]['default']     = 10;
@@ -110,8 +110,8 @@ $modversion['config'][$c]['default']     = 10;
 // Module type
 include_once \XOOPS_ROOT_PATH . '/modules/wgbacklinks/include/common.php';
 $modversion['config'][$c]['name']        = 'wgbacklinks_modtype';
-$modversion['config'][$c]['title']       = '\_MI_WGBACKLINKS_MODTYPE';
-$modversion['config'][$c]['description'] = '\_MI_WGBACKLINKS_MODTYPE_DESC';
+$modversion['config'][$c]['title']       = '_MI_WGBACKLINKS_MODTYPE';
+$modversion['config'][$c]['description'] = '_MI_WGBACKLINKS_MODTYPE_DESC';
 $modversion['config'][$c]['formtype']    = 'select';
 $modversion['config'][$c]['valuetype']   = 'int';
 $modversion['config'][$c]['default']     = 2;
@@ -119,8 +119,8 @@ $modversion['config'][$c]['options']     = array('\_MI_WGBACKLINKS_MODTYPE_1' =>
 ++$c;
 // Unique Key for this module
 $modversion['config'][$c]['name']        = 'wgbacklinks_modkey';
-$modversion['config'][$c]['title']       = '\_MI_WGBACKLINKS_MODKEY';
-$modversion['config'][$c]['description'] = '\_MI_WGBACKLINKS_MODKEY_DESC';
+$modversion['config'][$c]['title']       = '_MI_WGBACKLINKS_MODKEY';
+$modversion['config'][$c]['description'] = '_MI_WGBACKLINKS_MODKEY_DESC';
 $modversion['config'][$c]['formtype']    = 'textbox';
 $modversion['config'][$c]['valuetype']   = 'text';
 $modversion['config'][$c]['default']     = md5(\substr(str_shuffle("!$%&/=?_-;:,.0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 50));
