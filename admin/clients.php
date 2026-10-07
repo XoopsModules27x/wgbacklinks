@@ -148,7 +148,7 @@ switch ($op) {
     break;
     case 'delete':
         $clientsObj = $clientsHandler->get($clientId);
-        if (isset($_REQUEST['ok']) && 1 == $_REQUEST['ok']) {
+        if (1 === Request::getInt('ok')) {
             if (!$GLOBALS['xoopsSecurity']->check()) {
                 \redirect_header('clients.php', 3, \implode(', ', $GLOBALS['xoopsSecurity']->getErrors()));
             }
