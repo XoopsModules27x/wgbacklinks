@@ -180,7 +180,7 @@ switch ($op) {
     break;
     case 'activate':
         $sitesObj = $sitesHandler->get($siteId);
-        $sitesObj->setVar('site_active', $_REQUEST['new_site_active']);
+        $sitesObj->setVar('site_active', Request::getInt('new_site_active'));
         $sitesObj->setVar('site_shared', '0');
         // Insert Data
         if ($sitesHandler->insert($sitesObj)) {
@@ -202,7 +202,7 @@ switch ($op) {
     break;
     case 'delete':
         $sitesObj = $sitesHandler->get($siteId);
-        if (isset($_REQUEST['ok']) && 1 == $_REQUEST['ok']) {
+        if (1 === Request::getInt('ok')) {
             if (!$GLOBALS['xoopsSecurity']->check()) {
                 \redirect_header('sites.php', 3, \implode(', ', $GLOBALS['xoopsSecurity']->getErrors()));
             }

@@ -147,7 +147,7 @@ switch ($op) {
     break;
     case 'delete':
         $providersObj = $providersHandler->get($providerId);
-        if (isset($_REQUEST['ok']) && 1 == $_REQUEST['ok']) {
+        if (1 === Request::getInt('ok')) {
             if (!$GLOBALS['xoopsSecurity']->check()) {
                 \redirect_header('providers.php', 3, \implode(', ', $GLOBALS['xoopsSecurity']->getErrors()));
             }
