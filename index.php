@@ -20,7 +20,7 @@ declare(strict_types=1);
  * @author         Goffy - Wedega.com - Email:<webmaster@wedega.com> - Website:<https://wedega.com>
  */
 
-include __DIR__ . '/header.php';
+include_once __DIR__ . '/header.php';
 $GLOBALS['xoopsOption']['template_main'] = 'wgbacklinks_index.tpl';
 include_once \XOOPS_ROOT_PATH . '/header.php';
 // Define Stylesheet
@@ -56,4 +56,4 @@ unset($keywords);
 wgbacklinksMetaDescription(\_MD_WGBACKLINKS_INDEX_DESC);
 $GLOBALS['xoopsTpl']->assign('xoops_mpageurl', \WGBACKLINKS_URL . '/index.php');
 
-include __DIR__ . '/footer.php';
+include_once __DIR__ . '/footer.php';

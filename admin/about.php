@@ -18,8 +18,8 @@
  * @author         Goffy - Wedega.com - Email:<webmaster@wedega.com> - Website:<https://wedega.com>
  * @version        $Id: 1.0 about.php 1 Thu 2016-05-05 08:16:09Z Wedega - Webdesign Gabor $
  */
-include __DIR__ . '/header.php';
+include_once __DIR__ . '/header.php';
 $templateMain = 'wgbacklinks_admin_about.tpl';
 $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('about.php'));
 $GLOBALS['xoopsTpl']->assign('about', $adminMenu->renderAbout('', false));
-include __DIR__ . '/footer.php';
+include_once __DIR__ . '/footer.php';

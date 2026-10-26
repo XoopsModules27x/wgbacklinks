@@ -22,11 +22,14 @@ declare(strict_types=1);
 
 use XoopsModules\Wgbacklinks\Helper;
 
+require_once \dirname(__DIR__) . '/preloads/autoloader.php';
+
 $dirname = \basename(\dirname(__DIR__));
 $moduleHandler = xoops_gethandler('module');
 $xoopsModule = \XoopsModule::getByDirname($dirname);
 $moduleInfo = $moduleHandler->get($xoopsModule->getVar('mid'));
 $sysPathIcon32 = $moduleInfo->getInfo('sysicons32');
+
 
 // Get instance of module
 $helper = Helper::getInstance();

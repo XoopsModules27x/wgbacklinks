@@ -20,6 +20,8 @@ declare(strict_types=1);
  * @author         Goffy - Wedega.com - Email:<webmaster@wedega.com> - Website:<https://wedega.com>
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 // Copy base file
 $indexFile = XOOPS_UPLOAD_PATH . '/index.php';
 $blankFile = XOOPS_UPLOAD_PATH . '/blank.gif';
@@ -29,5 +31,5 @@ if (!\is_dir($wgbacklinks)) {
     \mkdir($wgbacklinks);
     chmod($wgbacklinks, 0777);
 }
-\copy($indexFile, $wgbacklinks . '/index.php');
+\copy($indexFile, $wgbacklinks . '/index.html');
 // ------------------- Install Footer ------------------- //

@@ -20,7 +20,7 @@ declare(strict_types=1);
  * @author         Goffy - Wedega.com - Email:<webmaster@wedega.com> - Website:<https://wedega.com>
  */
 
-use XoopsModules\Wgbacklinks\Helper;
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
 
 function wgbacklinksMetaKeywords($content): void
 {
