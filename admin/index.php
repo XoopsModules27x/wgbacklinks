@@ -20,7 +20,7 @@ declare(strict_types=1);
  * @author         Goffy - Wedega.com - Email:<webmaster@wedega.com> - Website:<https://wedega.com>
  */
 
-include __DIR__ . '/header.php';
+include_once __DIR__ . '/header.php';
 
 // Count elements
 $countProviders = $providersHandler->getCount();
@@ -60,4 +60,4 @@ if ($permModuleRead == 0) {
     $result = $xoopsDB->exec($sql);
 }
 
-include __DIR__ . '/footer.php';
+include_once __DIR__ . '/footer.php';

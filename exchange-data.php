@@ -21,7 +21,7 @@ declare(strict_types=1);
  */
 
 use Xmf\Request;
-include __DIR__ . '/header.php';
+include_once __DIR__ . '/header.php';
 
 $ptype = Request::getString('ptype');
 

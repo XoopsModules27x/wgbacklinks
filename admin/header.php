@@ -55,5 +55,5 @@ if (\file_exists($GLOBALS['xoops']->path($pathModuleAdmin . '/moduleadmin.php'))
     \redirect_header('../../../admin.php', 5, _AM_MODULEADMIN_MISSING);
 }
 xoops_cp_header();
-$adminMenu = new ModuleAdmin();
+$adminMenu = \Xmf\Module\Admin::getInstance();
 $style = \WGBACKLINKS_URL . '/assets/css/admin/style.css';

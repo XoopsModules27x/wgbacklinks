@@ -22,7 +22,7 @@ declare(strict_types=1);
 
 use Xmf\Request;
 
-include __DIR__ . '/header.php';
+include_once __DIR__ . '/header.php';
 // It recovered the value of argument op in URL$
 $op       = Request::getString('op', 'list');
 $clientId = Request::getInt('client_id');
@@ -125,7 +125,7 @@ switch ($op) {
             } else {
                 // an error occured
                 echo $result;
-                \redirect_header('clients.php?op=list&amp;error=' . \_AM_WGBACKLINKS_PROVIDER_ERROR_ADD, 5, \_AM_WGBACKLINKS_PROVIDER_ERROR_ADD);
+                \redirect_header('clients.php?op=list&error=' . \_AM_WGBACKLINKS_PROVIDER_ERROR_ADD, 5, \_AM_WGBACKLINKS_PROVIDER_ERROR_ADD);
             }
         } else {
             $GLOBALS['xoopsTpl']->assign('error', $clientsObj->getHtmlErrors());
@@ -167,7 +167,7 @@ switch ($op) {
                     // creating provider successful or provider already existing
                     \redirect_header('clients.php', 3, \_AM_WGBACKLINKS_FORM_DELETE_OK);
                 } else if ( $result == \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY ) {
-                    \redirect_header('clients.php?op=list&amp;error=' . \_AM_WGBACKLINKS_PROVIDER_ERROR_DELETE . "<br>" . \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY, 10, \_AM_WGBACKLINKS_PROVIDER_ERROR_DELETE);
+                    \redirect_header('clients.php?op=list&error=' . \_AM_WGBACKLINKS_PROVIDER_ERROR_DELETE . "<br>" . \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY, 10, \_AM_WGBACKLINKS_PROVIDER_ERROR_DELETE);
                 } else {
                     // an error occured
                     $GLOBALS['xoopsTpl']->assign('error', $result);
@@ -182,4 +182,4 @@ switch ($op) {
 
     break;
 }
-include __DIR__ . '/footer.php';
+include_once __DIR__ . '/footer.php';
