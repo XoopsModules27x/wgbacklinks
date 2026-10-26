@@ -23,7 +23,7 @@ declare(strict_types=1);
 defined('XOOPS_ROOT_PATH') || exit('Restricted access');
 
 // Copy base file
-$indexFile = XOOPS_UPLOAD_PATH . '/index.html';
+$indexFile = XOOPS_UPLOAD_PATH . '/index.php';
 $blankFile = XOOPS_UPLOAD_PATH . '/blank.gif';
 // Making of uploads/wgbacklinks folder
 $wgbacklinks = XOOPS_UPLOAD_PATH . '/wgbacklinks';
