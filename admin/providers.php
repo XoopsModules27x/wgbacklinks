@@ -36,7 +36,7 @@ switch ($op) {
         $start = Request::getInt('start');
         $limit = Request::getInt('limit', $helper->getConfig('adminpager'));
         $templateMain = 'wgbacklinks_admin_providers.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('providers.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('providers.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_ADD_PROVIDER, 'providers.php?op=new');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
         $providersCount = $providersHandler->getCountProviders();
@@ -74,7 +74,7 @@ switch ($op) {
     break;
     case 'new':
         $templateMain = 'wgbacklinks_admin_providers.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('providers.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('providers.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_PROVIDERS_LIST, 'providers.php', 'list');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
         // Get Form
@@ -135,7 +135,7 @@ switch ($op) {
     break;
     case 'edit':
         $templateMain = 'wgbacklinks_admin_providers.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('providers.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('providers.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_ADD_PROVIDER, 'providers.php?op=new');
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_PROVIDERS_LIST, 'providers.php', 'list');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());

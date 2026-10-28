@@ -32,7 +32,7 @@ $siteId = Request::getInt('site_id');
 switch ($op) {
     case 'share':
         $templateMain = 'wgbacklinks_admin_shares.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('sites.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('sites.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_SITES_LIST, 'sites.php?op=list', 'list');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
         $clientsCount = $clientsHandler->getCountClients();
@@ -106,7 +106,7 @@ switch ($op) {
         $templateMain = 'wgbacklinks_admin_sites.tpl';
         $sitesCount = $sitesHandler->getCountSites();
         
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('sites.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('sites.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_ADD_SITE, 'sites.php?op=new');
         if ($sitesCount > 0 && $helper->getConfig('wgbacklinks_modtype') == \WGBACKLINKS_MODTYPE_1) {
             $adminMenu->addItemButton(\_AM_WGBACKLINKS_SITES_SHARE, 'sites.php?op=share', 'database_go');
@@ -139,7 +139,7 @@ switch ($op) {
     break;
     case 'new':
         $templateMain = 'wgbacklinks_admin_sites.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('sites.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('sites.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_SITES_LIST, 'sites.php', 'list');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
         // Get Form
@@ -190,7 +190,7 @@ switch ($op) {
     break;
     case 'edit':
         $templateMain = 'wgbacklinks_admin_sites.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('sites.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('sites.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_ADD_SITE, 'sites.php?op=new');
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_SITES_LIST, 'sites.php', 'list');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());

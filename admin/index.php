@@ -31,9 +31,9 @@ $templateMain   = 'wgbacklinks_admin_index.tpl';
 // InfoBox Statistics
 $adminMenu->addInfoBox(\_AM_WGBACKLINKS_STATISTICS);
 // Info elements
-$adminMenu->addInfoBoxLine(\_AM_WGBACKLINKS_STATISTICS, '<label>' . \_AM_WGBACKLINKS_THEREARE_PROVIDERS . '</label>', $countProviders);
-$adminMenu->addInfoBoxLine(\_AM_WGBACKLINKS_STATISTICS, '<label>' . \_AM_WGBACKLINKS_THEREARE_SITES . '</label>', $countSites);
-$adminMenu->addInfoBoxLine(\_AM_WGBACKLINKS_STATISTICS, '<label>' . \_AM_WGBACKLINKS_THEREARE_CLIENTS . '</label>', $countClients);
+$adminMenu->addInfoBoxLine(\sprintf( '<label>' . \_AM_WGBACKLINKS_THEREARE_PROVIDERS . '</label>', $countProviders));
+$adminMenu->addInfoBoxLine(\sprintf( '<label>' . \_AM_WGBACKLINKS_THEREARE_SITES . '</label>', $countSites));
+$adminMenu->addInfoBoxLine(\sprintf( '<label>' . \_AM_WGBACKLINKS_THEREARE_CLIENTS . '</label>', $countClients));
 // Upload Folders
 $folder = array(
     \WGBACKLINKS_UPLOAD_PATH
@@ -45,7 +45,7 @@ foreach (\array_keys($folder) as $i) {
 }
 
 // Render Index
-$GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('index.php'));
+$GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('index.php'));
 $GLOBALS['xoopsTpl']->assign('index', $adminMenu->renderIndex());
 
 // check module_read permission for anonymous
