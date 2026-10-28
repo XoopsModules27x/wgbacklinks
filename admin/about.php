@@ -20,6 +20,6 @@
  */
 include_once __DIR__ . '/header.php';
 $templateMain = 'wgbacklinks_admin_about.tpl';
-$GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('about.php'));
+$GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('about.php'));
 $GLOBALS['xoopsTpl']->assign('about', $adminMenu->renderAbout('', false));
 include_once __DIR__ . '/footer.php';

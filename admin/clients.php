@@ -46,7 +46,7 @@ switch ($op) {
         $start = Request::getInt('start');
         $limit = Request::getInt('limit', $helper->getConfig('adminpager'));
 
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('clients.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('clients.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_ADD_CLIENT, 'clients.php?op=new');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
         $clientsCount = $clientsHandler->getCountClients();
@@ -83,7 +83,7 @@ switch ($op) {
 
     break;
     case 'new':
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('clients.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('clients.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_CLIENTS_LIST, 'clients.php', 'list');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
         // Get Form
@@ -136,7 +136,7 @@ switch ($op) {
 
     break;
     case 'edit':
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('clients.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->renderNavigation('clients.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_ADD_CLIENT, 'clients.php?op=new');
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_CLIENTS_LIST, 'clients.php', 'list');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
